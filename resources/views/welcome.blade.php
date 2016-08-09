@@ -145,35 +145,44 @@
         </div>      
     </div>
 
+    <?php $array_upsa_day = array("Martes", "Jueves", "Sabado", "Domingo");
+          $array_uagrm_day = array("Lunes", "Miercoles", "Sabado", "Domingo"); ?>
+
     <div class="container">
         <div class="row">
             <div class="col m12">
                 <div class="row">
-                    <?php $fechas = DB::table('date__works')->where('date__works.universidad', '=', 'upsa')->get(); ?>
-                    @foreach($fechas as $fecha)
-                    <div class="col m6">
-                        <div class="col s12">
-                            <ul class="tabs">
-                                <li class="tab col s3"><a href="#test{{ $fecha->id }}">Test 1</a></li>
-                            </ul>
-                        </div>
-                        <?php $horas = DB::table('date__works')->join('detalles', 'date__works.id', '=', 'detalles.date_id')
-                                            ->join('time__works', 'detalles.time_id', '=', 'time__works.id')
-                                            ->where('date__works.id', '=', $fecha->id)->select('time__works.*')
-                                            ->get(); ?>
+                    @for($i=0; $i<4; $i++) 
+                        
+                        <?php $fechas = DB::table('date__works')->where('date__works.universidad', '=', 'uagrm')->get(); ?>
+                        @foreach($fechas as $fecha)
+                            <div class="col m6">
+                                <div class="col s12">
+                                    <ul class="tabs">
+                                        <li class="tab col s3">
+                                            <a href="#test{{ $fecha->id }}">{{ $fecha->fecha }}</a>
+                                        </li>
+                                    </ul>       
+                                </div>          
+                                <?php $horas = DB::table('date__works')->join('detalles', 'date__works.id', '=', 'detalles.date_id')
+                                                    ->join('time__works', 'detalles.time_id', '=', 'time__works.id')
+                                                    ->where('date__works.id', '=', $fecha->id)->select('time__works.*', 'detalles.*')
+                                                    ->get(); ?>
 
-                        <div id="test{{ $fecha->id }}" class="col s12">
-                            <ul class="collection">
-                                @foreach($horas as $hora)
-                                    <li class="collection-item">
-                                        <input name="group{{ $fecha->id }}" type="radio" id="test{{ $hora->id }}" />
-                                        <label for="test{{ $hora->id }}">{{ $hora->hora }}</label>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                    @endforeach
+                                <div id="test{{ $fecha->id }}" class="col s12">
+                                    <ul class="collection">
+                                        @foreach($horas as $hora)
+                                            <li class="collection-item">
+                                                <input name="group{{ $fecha->id }}" type="radio" id="test{{ $hora->id }}" />
+                                                <label for="test{{ $hora->id }}">{{ $hora->hora }} - {{ $hora->cantidad }}</label>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        @endforeach
+                        
+                    @endfor
                 </div>
             </div>
         </div>
