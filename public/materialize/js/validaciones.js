@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
 	$('#rbtn-upsa').click(function() {
+		$('#uni').val('1')
 		$('#university').val('UPSA')
 	})
 
 	$('#rbtn-uagrm').click(function() {
+		$('#uni').val('2')
 		$('#university').val('UAGRM')	
 	})
 
@@ -38,6 +40,9 @@ $(document).ready(function() {
 		}
 	})
 
+	$('#form').submit(function() {
+		alert('evento')
+	})
 })
 
 
