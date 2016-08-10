@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGruposTable extends Migration
+class CreateGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,8 @@ class CreateGruposTable extends Migration
      */
     public function up()
     {
-        Schema::create('grupos', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('date_id')->unsigned();
-            $table->integer('time_id')->unsigned();
-            $table->foreign(['date_id', 'time_id'])->references(['date_id', 'time_id'])->on('detalles')->onDelete('cascade');
             $table->string('universidad');
             $table->string('representante');
             $table->string('rtelefono');
@@ -47,6 +44,6 @@ class CreateGruposTable extends Migration
      */
     public function down()
     {
-        Schema::drop('grupos');
+        Schema::drop('groups');
     }
 }

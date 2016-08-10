@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDateWorksTable extends Migration
+class CreateDateTimesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,13 @@ class CreateDateWorksTable extends Migration
      */
     public function up()
     {
-        Schema::create('date__works', function (Blueprint $table) {
+        Schema::create('date_times', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fecha');
+            $table->string('hora');
             $table->string('dia');
             $table->string('universidad');
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateDateWorksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('date__works');
+        Schema::drop('date_times');
     }
 }

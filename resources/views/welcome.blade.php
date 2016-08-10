@@ -9,12 +9,12 @@
     </head>
     <body>
         <div class="row">
-      <div class="col s12 m12">
-        <div class="card-panel teal center-align">
-          <h4 class="white-text">Formulario de Registro</h4>
+          <div class="col s12 m12">
+            <div class="card-panel teal center-align">
+              <h4 class="white-text">Formulario de Registro</h4>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
     <a href="#" id="prev" class="disabled">
         <div class="absolute position-left center-align">
@@ -145,10 +145,10 @@
         </div>      
     </div>
 
-    <?php $array_upsa_day = array("Martes", "Jueves", "Sabado", "Domingo");
+{{--     <?php $array_upsa_day = array("Martes", "Jueves", "Sabado", "Domingo");
           $array_uagrm_day = array("Lunes", "Miercoles", "Sabado", "Domingo"); ?>
-
-    <div class="container">
+ --}}
+{{--     <div class="container">
         <div class="row">
             <div class="col m12">
                 <div class="row">
@@ -186,7 +186,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Formulario UPSA -->
     
