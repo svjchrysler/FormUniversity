@@ -16,18 +16,36 @@ use App\Group;
 
 use App\Detail;
 
+use DB;
+
 
 class DateTimeController extends Controller
 {
 
 	public function store(Request $request) {
 		if ($request->universidad == 1) {
-			$this->guardarUpsa($request);
+			$group = $this->guardarUpsa($request);
 		} else {
-			$this->guardarUagrm($request);
+			$group = $this->guardarUagrm($request);
 		}
 
-		return view('welcome');
+		return view('enviado');
+	}
+
+	public function enviarCorreo($id) {
+		$data_group = DB::table('groups')
+						->join('details', 'groups.id', '=', 'details.group_id')
+						->join('date_times', 'details.date_time_id', '=', 'date_times.id')
+						->where('groups.id', '=', $id)
+						->get();
+
+		Mail::send('correo', ['data_group' => $data_group], function($msj) {
+			$msj->subject('Datos de los horarios');
+			$msj->to('svjchrysler@gmail.com');
+		});
+
+		// return Redirect::to('/enviado');
+
 	}
 
 	public function guardarUpsa($request) {
@@ -106,6 +124,8 @@ class DateTimeController extends Controller
 		$detail->save();
 		$this->actualizarDateTime($request->ghora12);
 
+		return $group;
+
 	}
 
 	public function actualizarDateTime($id) {
@@ -143,6 +163,8 @@ class DateTimeController extends Controller
 		$group->emailfive = $request->emailFive;
 
 		$group->save();
+
+		$global_group = $group->id;
 
 		return $group;
 	}
@@ -222,41 +244,43 @@ class DateTimeController extends Controller
 		$detail->date_time_id = $request->ghora24;
 		$detail->save();
 		$this->actualizarDateTime($request->ghora24);
+
+		return $group;
 	}
 
-
-    public function guardar() {
+   //  public function guardar() {
     	
 
-    	for ($i=1; $i <= 4; $i++) { 
+   //  	for ($i=1; $i <= 2; $i++) { 
 
-    		$dt = new DateTime();
-    		$dt->fecha = '30/08';
+   //  		$dt = new DateTime();
+   //  		$dt->fecha = '11/09';
 			
-			switch ($i) {
-	    		case 1:
-	    			$dt->hora = '07:00am - 11:00am';
-	    			$dt->cantidad = 5;
-	    			break;
-	    		case 2:
-	    			$dt->hora = '11:00am - 15:00pm';
-	    			$dt->cantidad = 5;
-	    			break;
-	    		case 3:
-	    			$dt->hora = '15:00pm - 19:00pm';
-	    			$dt->cantidad = 5;
-	    			break;
-	    		case 4:
-	    			$dt->hora = '19:00pm - 23:00pm';
-	    			$dt->cantidad = 4;
-	    			break;
-	    	}
+			// switch ($i) {
+	  //   		case 1:
+	  //   			$dt->hora = '08:00am - 16:00pm';
+	  //   			$dt->cantidad = 4;
+	  //   			break;
+	  //   		case 2:
+	  //   			$dt->hora = '16:00pm - 21:00pm';
+	  //   			$dt->cantidad = 4;
+	  //   			break;
+	  //   		case 3:
+	  //   			$dt->hora = '16:00pm - 20:00pm';
+	  //   			$dt->cantidad = 5;
+	  //   			break;
+	  //   		case 4:
+	  //   			$dt->hora = '19:00pm - 23:00pm';
+	  //   			$dt->cantidad = 4;
+	  //   			break;
+	  //   	}
 
-	    	$dt->dia = 'Martes';
-	    	$dt->universidad = 'upsa';
-	    	$dt->save();
-    	}
+	  //   	$dt->dia = 'Domingo';
+	  //   	$dt->universidad = 'uagrm';
+	  //   	$dt->save();
+   //  	}
 
-    	return 'guardado';    	
-    }
+   //  	return 'guardado';    	
+   //  }
+
 }

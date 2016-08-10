@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/guardar', 'DateTimeController@guardar');
 
 Route::resource('form', 'DateTimeController');
+
+Route::get('/enviado', function() {
+	return view('enviado');
+});

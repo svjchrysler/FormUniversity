@@ -40,9 +40,17 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#form').submit(function() {
-		alert('evento')
+	$('#btn-continuar').click(function(){
+		$('#prev').removeClass('hide')
+		$('#next').removeClass('hide')
+		$('#content-0').addClass('hide')
+		$('#content-1').removeClass('hide')
+		$('#btn-agregar').removeClass('hide')
 	})
+
+	// $('#form').submit(function() {
+	// 	alert('evento')
+	// })
 })
 
 

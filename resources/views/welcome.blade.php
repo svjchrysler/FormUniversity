@@ -5,6 +5,7 @@
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {{ Html::style('materialize/css/materialize.min.css') }}
+        {{ Html::style('materialize/css/animate.css') }}
         {{ Html::style('materialize/css/style.css') }}
 
     </head>
@@ -17,21 +18,85 @@
           </div>
         </div>
 
-    <a href="#" id="prev" class="disabled">
+    <a href="#" class="hide" id="prev">
         <div class="absolute position-left center-align">
             <img src="materialize/img/back.png">
         </div>
     </a>
 
-    <a href="#" id="next">
+    <a href="#" class="hide" id="next">
         <div class="absolute position-right center-align">
             <img src="materialize/img/next.png">
         </div>
     </a>
 
+
+    {{-- <div class="container-fluid tamano-vh align-horizontal-vertical hide">
+
+        <div class="row">
+
+            <div class="col s2 altura-flecha align-horizontal-vertical">
+                <a href="#" id="prev">
+                    <div class="center-align">
+                        <img src="materialize/img/back.png">
+                    </div>
+                </a>
+            </div>
+            <div class="col s8">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s3">
+                                <a href="#agosto23">23 de Agosto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="agosto23" class="col s12">
+                        <ul class="collection">
+                            <li class="collection-item">
+                                <input name="ghora1" type="radio" id="hora1" />
+                                <label for="hora1">07:00am - 11:00am</label>
+                            </li>
+                            <li class="collection-item">
+                                <input name="ghora1" type="radio" id="hora2" />
+                                <label for="hora2">11:00am - 15:00pm</label>
+                            </li>
+                            <li class="collection-item">
+                                <input name="ghora1" type="radio" id="hora3" />
+                                <label for="hora3">15:00pm - 19:00pm</label>
+                            </li>
+                            <li class="collection-item">
+                                <input name="ghora1" type="radio" id="hora4" />
+                                <label for="hora4">19:00pm - 23:00pm</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2 altura-flecha align-horizontal-vertical">
+                <a href="#" id="next">
+                    <div class="center-align">
+                        <img src="materialize/img/next.png">
+                    </div>
+                </a>
+            </div>
+
+            
+        </div>
+    </div> --}}
+
+    <div class="container-fluid align-horizontal-vertical" id="content-0" style="height:80vh;">
+        <div class="row">
+            <div class="col s12 center-align">
+                <h1 class="animated zoomIn">Bienvenido</h1><br>
+                <button class="btn" id="btn-continuar">Registra Tu Equipo</button>
+            </div>
+        </div>
+    </div>
+
     {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form']) !!}
     
-        <div class="container" id="content-1">
+        <div class="container hide" id="content-1">
             <div class="row">
                 <div class="col s12">
                     <div class="row">
@@ -178,9 +243,9 @@
                                     <?php $dates = DB::table('date_times')->where('fecha', '=', '23/08')->get(); ?>
                                     @foreach($dates as $data)
                                         <li class="collection-item">
-                                            @if ($data->cantidad == 1)
+                                            @if ($data->cantidad == 0)
                                                 <input name="ghora1" type="radio" disabled value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                            <label for="hora{{ $data->id }}">{{ $data->hora }} - {{ 'Cantidad '.$data->cantidad. - 'No Hay Cupos' }}</label>
+                                            <label for="hora{{ $data->id }}">{{ $data->hora }} - {{ 'Cantidad 0 No Hay Cupos' }}</label>
                                             @else
                                                 <input name="ghora1" type="radio" value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                             <label for="hora{{ $data->id }}">{{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}</label>
@@ -931,7 +996,7 @@
 
         <input type="hidden" name="universidad" id="uni">
 
-        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <div class="fixed-action-btn hide" id="btn-agregar" style="bottom: 45px; right: 24px;">
             <button type="submit" class="btn-floating btn-large red">
                 <i class="material-icons">menu</i>
             </button>
