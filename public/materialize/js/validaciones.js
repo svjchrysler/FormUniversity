@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	 $('.carousel.carousel-slider').carousel({full_width: true});
+	var cont = 0;
 
 	$('#rbtn-upsa').click(function() {
 		$('#uni').val('1')
@@ -12,32 +14,17 @@ $(document).ready(function() {
 
 	$('#next').click(function() {
 
-		if($('#rbtn-upsa').is(':checked') || $('#rbtn-uagrm').is(':checked')) {
-			if($('#rbtn-upsa').is(':checked')) {
-				nextform('upsa')
-			}
-
-			if ($('#rbtn-uagrm').is(':checked')) {
-				nextform('uagrm')
-			}
-		} else {
-			alert('Seleccionar una Universidad')
+		if($('#rbtn-upsa').is(':checked')) {
+			nextform('upsa')
 		}
 		
 	})
 
 	$('#prev').click(function() {
-		if($('#rbtn-upsa').is(':checked') || $('#rbtn-uagrm').is(':checked')) {
 			if($('#rbtn-upsa').is(':checked')) {
 				prevform('upsa')
 			}
 
-			if ($('#rbtn-uagrm').is(':checked')) {
-				prevform('uagrm')
-			}
-		} else {
-			alert('Seleccionar una Universidad')
-		}
 	})
 
 	$('#btn-continuar').click(function(){
@@ -45,43 +32,42 @@ $(document).ready(function() {
 		$('#next').removeClass('hide')
 		$('#content-0').addClass('hide')
 		$('#content-1').removeClass('hide')
+		$('#fondo').addClass('hide')
 		$('#btn-agregar').removeClass('hide')
+		$('#content-nav').removeClass('hide')
 	})
 
-	// $('#form').submit(function() {
-	// 	alert('evento')
-	// })
+	$("#agosto23").css("display", "block");
+	$("#agosto30").css("display", "block");
+
+
+	$('#prevhorario').click(function() {
+		if (cont > 0) {
+			cont--;
+		}
+	})
+
+	$('#nexthorario').click(function() {
+		cont++;
+	})
+
+
 })
 
 
 function nextform(university) {
-	if(university === 'upsa') {
-		if(!$('#content-1').hasClass('hide')) {	
-			if($('#content-2').hasClass('hide') && $('#content-3').hasClass('hide')){
-				$('#content-1').addClass('hide')
-				$('#content-2').removeClass('hide')
-				$('#content-3').removeClass('hide')
-			} else {
-				$('#content-1').removeClass('hide')
-				$('#content-2').addClass('hide')
-				$('#content-3').addClass('hide')
-			}
+
+	if(!$('#content-1').hasClass('hide')) {	
+		if($('#content-2').hasClass('hide') && $('#content-3').hasClass('hide')){
+			$('#content-1').addClass('hide')
+			$('#content-2').removeClass('hide')
+			$('#content-3').removeClass('hide')
+		} else {
+			$('#content-1').removeClass('hide')
+			$('#content-2').addClass('hide')
+			$('#content-3').addClass('hide')
 		}
 	}
-
-	if(university === 'uagrm') {
-		if(!$('#content-1').hasClass('hide')) {	
-			if($('#content-4').hasClass('hide') && $('#content-5').hasClass('hide')){
-				$('#content-1').addClass('hide')
-				$('#content-4').removeClass('hide')
-				$('#content-5').removeClass('hide')
-			} else {
-				$('#content-1').removeClass('hide')
-				$('#content-4').addClass('hide')
-				$('#content-5').addClass('hide')
-			}
-		}	
-	}	
 }
 
 function prevform(university) {
@@ -98,21 +84,8 @@ function prevform(university) {
 			}
 		}		
 	}
-
-	if(university === 'uagrm') {
-		if($('#content-1').hasClass('hide')) {	
-			if($('#content-4').hasClass('hide') && $('#content-5').hasClass('hide')){
-				$('#content-1').addClass('hide')
-				$('#content-4').removeClass('hide')
-				$('#content-5').removeClass('hide')
-			} else {
-				$('#content-1').removeClass('hide')
-				$('#content-4').addClass('hide')
-				$('#content-5').addClass('hide') 
-			}
-		}
-	}
 }
+
 
 function cambiarText(elemento, texto) {
 	$(elemento).empty()

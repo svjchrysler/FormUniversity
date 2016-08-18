@@ -61,3 +61,19 @@
 	background: url('../img/gmail.jpg') no-repeat;
 	background-size: cover;
 }
+
+.space-content-calendar {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.fondo-fondo {
+	background: url('../img/fondo.png') no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+.altura {
+	height: 100vh;
+	width: 100wh;
+}

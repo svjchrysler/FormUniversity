@@ -248,39 +248,33 @@ class DateTimeController extends Controller
 		return $group;
 	}
 
-   //  public function guardar() {
-    	
+   	// public function guardar() {
 
-   //  	for ($i=1; $i <= 2; $i++) { 
+   	// 	for ($i=1; $i < 5; $i++) { 
+   	// 		$date = new DateTime();
+   	// 		$date->fecha = "22/09";
+   			
+   	// 		switch ($i) {
+   	// 			case 1:
+   	// 				$date->hora = "7:00am - 10:40am";
+   	// 				break;
+   	// 			case 2:
+   	// 				$date->hora = "11:00am - 14:40pm";
+   	// 				break;
+				// case 3:
+   	// 				$date->hora = "15:00pm - 18:40pm";
+   	// 				break;
+				// case 4:
+   	// 				$date->hora = "19:00pm - 22:40pm";
+   	// 				break;
+   	// 		}
 
-   //  		$dt = new DateTime();
-   //  		$dt->fecha = '11/09';
-			
-			// switch ($i) {
-	  //   		case 1:
-	  //   			$dt->hora = '08:00am - 16:00pm';
-	  //   			$dt->cantidad = 4;
-	  //   			break;
-	  //   		case 2:
-	  //   			$dt->hora = '16:00pm - 21:00pm';
-	  //   			$dt->cantidad = 4;
-	  //   			break;
-	  //   		case 3:
-	  //   			$dt->hora = '16:00pm - 20:00pm';
-	  //   			$dt->cantidad = 5;
-	  //   			break;
-	  //   		case 4:
-	  //   			$dt->hora = '19:00pm - 23:00pm';
-	  //   			$dt->cantidad = 4;
-	  //   			break;
-	  //   	}
-
-	  //   	$dt->dia = 'Domingo';
-	  //   	$dt->universidad = 'uagrm';
-	  //   	$dt->save();
-   //  	}
-
-   //  	return 'guardado';    	
-   //  }
+   	// 		$date->universidad = "upsa";
+   	// 		$date->dia = "Jueves";
+   	// 		$date->cantidad = 2;
+   	// 		$date->save();
+   	// 	}
+    // 	return 'guardado';    	
+    // }
 
 }
