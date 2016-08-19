@@ -23,12 +23,7 @@ class DateTimeController extends Controller
 {
 
 	public function store(Request $request) {
-		if ($request->universidad == 1) {
-			$group = $this->guardarUpsa($request);
-		} else {
-			$group = $this->guardarUagrm($request);
-		}
-
+		$group = $this->guardarUpsa($request);
 		return view('enviado');
 	}
 
@@ -43,9 +38,6 @@ class DateTimeController extends Controller
 			$msj->subject('Datos de los horarios');
 			$msj->to('svjchrysler@gmail.com');
 		});
-
-		// return Redirect::to('/enviado');
-
 	}
 
 	public function guardarUpsa($request) {
@@ -123,6 +115,54 @@ class DateTimeController extends Controller
 		$detail->date_time_id = $request->ghora12;
 		$detail->save();
 		$this->actualizarDateTime($request->ghora12);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora13;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora13);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora14;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora14);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora15;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora15);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora16;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora16);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora17;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora17);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora18;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora18);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora19;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora19);
+
+		$detail = new Detail();
+		$detail->group_id = $group->id;
+		$detail->date_time_id = $request->ghora20;
+		$detail->save();
+		$this->actualizarDateTime($request->ghora20);
 
 		return $group;
 
