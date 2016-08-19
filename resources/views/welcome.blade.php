@@ -160,7 +160,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>27/08</h2>
+                                        <h2>Sabado - 27/08</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '27/08')->get(); ?>
                                             @foreach($dates as $data)
@@ -175,7 +175,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>28/08</h2>
+                                        <h2>Domingo - 28/08</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '28/08')->get(); ?>
                                             @foreach($dates as $data)
@@ -196,7 +196,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>30/08</h2>
+                                        <h2>Martes - 30/08</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '30/08')->get(); ?>
                                             @foreach($dates as $data)
@@ -211,7 +211,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>31/08</h2>
+                                        <h2>Miercoles - 31/08</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '31/08')->get(); ?>
                                             @foreach($dates as $data)
@@ -232,7 +232,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>01/09</h2>
+                                        <h2>Jueves - 01/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '01/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -247,7 +247,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>03/09</h2>
+                                        <h2>Sabado - 03/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '03/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -268,7 +268,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>04/09</h2>
+                                        <h2>Domingo - 04/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '04/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -283,7 +283,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>06/09</h2>
+                                        <h2>Martes - 06/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '06/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -304,7 +304,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>07/09</h2>
+                                        <h2>Miercoles - 07/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '07/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -319,7 +319,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>08/09</h2>
+                                        <h2>Jueves - 08/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '08/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -340,7 +340,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>10/09</h2>
+                                        <h2>Sabado - 10/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '10/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -355,7 +355,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>11/09</h2>
+                                        <h2>Domingo - 11/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '11/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -376,7 +376,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>13/09</h2>
+                                        <h2>Martes - 13/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '13/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -391,7 +391,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>14/09</h2>
+                                        <h2>Miercoles - 14/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '14/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -412,7 +412,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>15/09</h2>
+                                        <h2>Jueves - 15/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '15/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -427,7 +427,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>17/09</h2>
+                                        <h2>Sabado - 17/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '17/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -448,7 +448,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>18/09</h2>
+                                        <h2>Domingo - 18/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '18/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -463,7 +463,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>20/09</h2>
+                                        <h2>Martes - 20/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '20/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -484,7 +484,7 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>21/09</h2>
+                                        <h2>Miercoles - 21/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '21/09')->get(); ?>
                                             @foreach($dates as $data)
@@ -499,7 +499,7 @@
                                     </div>
 
                                     <div class="col s6">
-                                        <h2>22/09</h2>
+                                        <h2>Jueves - 22/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '22/09')->get(); ?>
                                             @foreach($dates as $data)
