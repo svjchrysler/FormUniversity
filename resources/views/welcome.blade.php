@@ -47,96 +47,120 @@
                 
     <!-- Formulario UPSA -->
     
-        {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form']) !!}
+        {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form', 'files' => 'true']) !!}
 
             <div class="container hide altura" id="content-1">
                 <div class="row">
                     <div class="col s12">
                         <div class="row">
-                            <div class="input-field col s4">
+                            <div class="col s3 center-align">
+                                <br>
+                                <input type="file" name="file1">
+                            </div>
+                            <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameRepresentante" class="validate">
                                 <label for="nombre">Nombre Representante</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="telefono" type="number" required name="phoneRepresentante" class="validate">
                                 <label for="telefono">Telefono</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="email" type="email" required name="emailRepresentante" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s4">
+                            <div class="col s3 center-align">
+                                <br>
+                                <input type="file" name="file2">
+                            </div>
+                            <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameOne" class="validate">
                                 <label for="nombre">Nombre Integrante 1</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="telefono" type="number" required name="phoneOne" class="validate">
                                 <label for="telefono">Telefono</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="email" type="email" required name="emailOne" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s4">
+                            <div class="col s3 center-align">
+                                <br>
+                                <input type="file" name="file3">
+                            </div>
+                            <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameTwo" class="validate">
                                 <label for="nombre">Nombre Integrante 2</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="telefono" type="number" required name="phoneTwo" class="validate">
                                 <label for="telefono">Telefono</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="email" type="email" required name="emailTwo" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s4">
+                            <div class="col s3 center-align">
+                                <br>
+                                <input type="file" name="file4">
+                            </div>
+                            <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameThree" class="validate">
                                 <label for="nombre">Nombre Integrante 3</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="telefono" type="number" required name="phoneThree" class="validate">
                                 <label for="telefono">Telefono</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="email" type="email" required name="emailThree" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s4">
+                            <div class="col s3 center-align">
+                                <br>
+                                <input type="file" name="file5">
+                            </div>
+                            <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFour" class="validate">
                                 <label for="nombre">Nombre Integrante 4</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="telefono" type="number" required name="phoneFour" class="validate">
                                 <label for="telefono">Telefono</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="email" type="email" required name="emailFour" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s4">
+                            <div class="col s3 center-align">
+                                <br>
+                                <input type="file" name="file6">
+                            </div>
+                            <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFive" class="validate">
                                 <label for="nombre">Nombre Integrante 5</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="telefono" type="number" required name="phoneFive" class="validate">
                                 <label for="telefono">Telefono</label>
                             </div>
-                            <div class="input-field col s4">
+                            <div class="input-field col s3">
                                 <input id="email" type="email" required name="emailFive" class="validate">
                                 <label for="email">Email</label>
                             </div>

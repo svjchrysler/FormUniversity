@@ -21,6 +21,22 @@ use DB;
 
 class DateTimeController extends Controller
 {
+		public function pdf($id) {
+
+			$data = DB::table('date_times')
+						->join('details', 'date_times.id', '=', 'details.date_time_id')
+						->join('groups', 'details.group_id', '=', 'groups.id')
+						->get();
+
+			$group = Group::Find($id);
+
+	    	$view =  \View::make('pdf.horario', compact('data', 'group'))->render();
+		    $pdf = \App::make('dompdf.wrapper');
+		    $pdf->loadHTML($view);
+		    $pdf->setPaper('A4', 'landscape');
+
+	       	return $pdf->stream('horario');
+	}
 
 	public function store(Request $request) {
 		$group = $this->guardarUpsa($request);
@@ -181,113 +197,39 @@ class DateTimeController extends Controller
 		$group->representante = $request->nameRepresentante;
 		$group->rtelefono = $request->phoneRepresentante;
 		$group->remail = $request->emailRepresentante;
+		$group->file1 = $request->file1;
 
 		$group->nombreone = $request->nameOne;
 		$group->telefonoone = $request->phoneOne;
 		$group->emailone = $request->emailOne;
+		$group->file2 = $request->file2;
 
 		$group->nombretwo = $request->nameTwo;
 		$group->telefonotwo = $request->phoneTwo;
 		$group->emailtwo = $request->emailTwo;
+		$group->file3 = $request->file3;
 
 		$group->nombrethree = $request->nameThree;
 		$group->telefonothree = $request->phoneThree;
 		$group->emailthree = $request->emailThree;
+		$group->file4 = $request->file4;
 
 		$group->nombrefour = $request->nameFour;
 		$group->telefonofour = $request->phoneFour;
 		$group->emailfour = $request->emailFour;
+		$group->file5 = $request->file5;
 
 		$group->nombrefive = $request->nameFive;
 		$group->telefonofive = $request->phoneFive;
 		$group->emailfive = $request->emailFive;
+		$group->file6 = $request->file6;
 
 		$group->save();
 
-		$global_group = $group->id;
-
 		return $group;
 	}
 
-	public function guardarUagrm($request) {
-		$uni = 'uagrm';
-		$group = $this->guardarGrupo($request, $uni);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora13;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora13);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora14;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora14);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora15;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora15);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora16;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora16);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora17;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora17);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora18;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora18);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora19;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora19);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora20;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora20);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora21;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora21);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora22;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora22);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora23;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora23);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora24;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora24);
-
-		return $group;
-	}
-
+	
    	// public function guardar() {
 
    	// 	for ($i=1; $i < 5; $i++) { 
