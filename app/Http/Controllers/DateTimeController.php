@@ -108,78 +108,7 @@ class DateTimeController extends Controller
 		$detail->save();
 		$this->actualizarDateTime($request->ghora8);
 
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora9;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora9);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora10;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora10);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora11;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora11);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora12;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora12);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora13;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora13);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora14;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora14);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora15;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora15);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora16;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora16);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora17;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora17);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora18;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora18);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora19;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora19);
-
-		$detail = new Detail();
-		$detail->group_id = $group->id;
-		$detail->date_time_id = $request->ghora20;
-		$detail->save();
-		$this->actualizarDateTime($request->ghora20);
-
+		
 		return $group;
 
 	}

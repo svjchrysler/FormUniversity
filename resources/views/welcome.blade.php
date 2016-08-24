@@ -47,7 +47,7 @@
                 
     <!-- Formulario UPSA -->
     
-        {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form']) !!}
+        {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form', 'files' => 'true']) !!}
 
             <div class="container hide altura" id="content-1">
                 <div class="row">
@@ -55,8 +55,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="fileimg1" name="fileimg1">
-                                <input type="hidden" id="file1" name="file1">
+                                <input type="file" name="file1">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameRepresentante" class="validate">
@@ -75,8 +74,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="fileimg2" name="fileimg2">
-                                <input type="hidden" id="file2" name="file2">
+                                <input type="file" id="file2" name="file2">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameOne" class="validate">
@@ -95,8 +93,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="fileimg3" name="fileimg3">
-                                <input type="hidden" id="file3" name="file3">
+                                <input type="file" id="file3" name="file3">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameTwo" class="validate">
@@ -115,8 +112,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="fileimg4" name="fileimg4">
-                                <input type="hidden" id="file4" name="file4">
+                                <input type="file" id="file4" name="file4">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameThree" class="validate">
@@ -135,8 +131,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="fileimg5" name="fileimg5">
-                                <input type="hidden" id="file5" name="file5">
+                                <input type="file" id="file5" name="file5">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFour" class="validate">
@@ -155,8 +150,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="fileimg6" name="fileimg6">
-                                <input type="hidden" id="file6" name="file6">
+                                <input type="file" id="file6" name="file6">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFive" class="validate">
@@ -210,7 +204,7 @@
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '28/08')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora2" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora1" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -225,13 +219,13 @@
                             <div class="carousel-item white" href="#two!">
                                 <div class="row">
 
-                                    <div class="col s6">
+                                    <div class="col s4">
                                         <h2>Martes - 30/08</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '30/08')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora3" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora2" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -240,17 +234,32 @@
                                         </ul>
                                     </div>
 
-                                    <div class="col s6">
+                                    <div class="col s4">
                                         <h2>Miercoles - 31/08</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '31/08')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora4" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora2" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
                                                 </li>                                        
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                    <div class="col s4">
+                                        <h2>Jueves - 01/09</h2>
+                                        <ul class="collection left-align space-content-calendar">
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '01/09')->get(); ?>
+                                            @foreach($dates as $data)
+                                                <li class="collection-item">
+                                                    <input name="ghora2" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <label for="hora{{ $data->id }}">
+                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
+                                                    </label>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -262,31 +271,31 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>Jueves - 01/09</h2>
-                                        <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '01/09')->get(); ?>
-                                            @foreach($dates as $data)
-                                                <li class="collection-item">
-                                                    <input name="ghora5" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                                    <label for="hora{{ $data->id }}">
-                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
-                                                    </label>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-
-                                    <div class="col s6">
                                         <h2>Sabado - 03/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '03/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora6" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora3" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
                                                 </li>                                        
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                    <div class="col s6">
+                                        <h2>Domingo - 04/09</h2>
+                                        <ul class="collection left-align space-content-calendar">
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '04/09')->get(); ?>
+                                            @foreach($dates as $data)
+                                                <li class="collection-item">
+                                                    <input name="ghora3" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <label for="hora{{ $data->id }}">
+                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
+                                                    </label>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -297,13 +306,28 @@
                             <div class="carousel-item white" href="#four!">
                                 <div class="row">
 
-                                    <div class="col s6">
-                                        <h2>Domingo - 04/09</h2>
+                                    <div class="col s4">
+                                        <h2>Martes - 06/09</h2>
                                         <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '04/09')->get(); ?>
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '06/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora7" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora4" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <label for="hora{{ $data->id }}">
+                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
+                                                    </label>
+                                                </li>                                        
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                    <div class="col s4">
+                                        <h2>Miercoles - 07/09</h2>
+                                        <ul class="collection left-align space-content-calendar">
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '07/09')->get(); ?>
+                                            @foreach($dates as $data)
+                                                <li class="collection-item">
+                                                    <input name="ghora4" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -312,13 +336,13 @@
                                         </ul>
                                     </div>
 
-                                    <div class="col s6">
-                                        <h2>Martes - 06/09</h2>
+                                    <div class="col s4">
+                                        <h2>Jueves - 08/09</h2>
                                         <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '06/09')->get(); ?>
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '08/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora8" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora4" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -334,48 +358,12 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>Miercoles - 07/09</h2>
-                                        <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '07/09')->get(); ?>
-                                            @foreach($dates as $data)
-                                                <li class="collection-item">
-                                                    <input name="ghora9" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                                    <label for="hora{{ $data->id }}">
-                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
-                                                    </label>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-
-                                    <div class="col s6">
-                                        <h2>Jueves - 08/09</h2>
-                                        <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '08/09')->get(); ?>
-                                            @foreach($dates as $data)
-                                                <li class="collection-item">
-                                                    <input name="ghora10" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                                    <label for="hora{{ $data->id }}">
-                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
-                                                    </label>
-                                                </li>                                        
-                                            @endforeach
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="carousel-item white" href="#six!">
-                                <div class="row">
-
-                                    <div class="col s6">
                                         <h2>Sabado - 10/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '10/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora11" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora5" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -390,11 +378,62 @@
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '11/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora12" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora5" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
                                                 </li>                                        
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="carousel-item white" href="#six!">
+                                <div class="row">
+
+                                    <div class="col s4">
+                                        <h2>Martes - 13/09</h2>
+                                        <ul class="collection left-align space-content-calendar">
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '13/09')->get(); ?>
+                                            @foreach($dates as $data)
+                                                <li class="collection-item">
+                                                    <input name="ghora6" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <label for="hora{{ $data->id }}">
+                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
+                                                    </label>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                    <div class="col s4">
+                                        <h2>Miercoles - 14/09</h2>
+                                        <ul class="collection left-align space-content-calendar">
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '14/09')->get(); ?>
+                                            @foreach($dates as $data)
+                                                <li class="collection-item">
+                                                    <input name="ghora6" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <label for="hora{{ $data->id }}">
+                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
+                                                    </label>
+                                                </li>                                        
+                                            @endforeach
+                                        </ul>
+                                    </div>
+
+                                    <div class="col s4">
+                                        <h2>Jueves - 15/09</h2>
+                                        <ul class="collection left-align space-content-calendar">
+                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '15/09')->get(); ?>
+                                            @foreach($dates as $data)
+                                                <li class="collection-item">
+                                                    <input name="ghora6" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <label for="hora{{ $data->id }}">
+                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
+                                                    </label>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -406,63 +445,12 @@
                                 <div class="row">
 
                                     <div class="col s6">
-                                        <h2>Martes - 13/09</h2>
-                                        <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '13/09')->get(); ?>
-                                            @foreach($dates as $data)
-                                                <li class="collection-item">
-                                                    <input name="ghora13" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                                    <label for="hora{{ $data->id }}">
-                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
-                                                    </label>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-
-                                    <div class="col s6">
-                                        <h2>Miercoles - 14/09</h2>
-                                        <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '14/09')->get(); ?>
-                                            @foreach($dates as $data)
-                                                <li class="collection-item">
-                                                    <input name="ghora14" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                                    <label for="hora{{ $data->id }}">
-                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
-                                                    </label>
-                                                </li>                                        
-                                            @endforeach
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="carousel-item white" href="#eight!">
-                                <div class="row">
-
-                                    <div class="col s6">
-                                        <h2>Jueves - 15/09</h2>
-                                        <ul class="collection left-align space-content-calendar">
-                                            <?php $dates = DB::table('date_times')->where('fecha', '=', '15/09')->get(); ?>
-                                            @foreach($dates as $data)
-                                                <li class="collection-item">
-                                                    <input name="ghora15" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
-                                                    <label for="hora{{ $data->id }}">
-                                                        {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
-                                                    </label>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-
-                                    <div class="col s6">
                                         <h2>Sabado - 17/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '17/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora16" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora7" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -470,12 +458,6 @@
                                             @endforeach
                                         </ul>
                                     </div>
-
-                                </div>
-                            </div>
-
-                            <div class="carousel-item white" href="#nine!">
-                                <div class="row">
 
                                     <div class="col s6">
                                         <h2>Domingo - 18/09</h2>
@@ -483,22 +465,28 @@
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '18/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora17" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora7" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
                                                 </li>
                                             @endforeach
                                         </ul>
-                                    </div>
+                                    </div>            
+                        
+                                </div>
+                            </div>
 
-                                    <div class="col s6">
+                            <div class="carousel-item white" href="#eight!">
+                                <div class="row">
+
+                                    <div class="col s4">
                                         <h2>Martes - 20/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '20/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora18" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora8" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -507,19 +495,13 @@
                                         </ul>
                                     </div>
 
-                                </div>
-                            </div>
-
-                            <div class="carousel-item white" href="#ten!">
-                                <div class="row">
-
-                                    <div class="col s6">
+                                    <div class="col s4">
                                         <h2>Miercoles - 21/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '21/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora19" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora8" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
@@ -528,23 +510,24 @@
                                         </ul>
                                     </div>
 
-                                    <div class="col s6">
+                                    <div class="col s4">
                                         <h2>Jueves - 22/09</h2>
                                         <ul class="collection left-align space-content-calendar">
                                             <?php $dates = DB::table('date_times')->where('fecha', '=', '22/09')->get(); ?>
                                             @foreach($dates as $data)
                                                 <li class="collection-item">
-                                                    <input name="ghora20" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
+                                                    <input name="ghora8" type="radio" @if($data->cantidad == 0) {{ "disabled" }} @endif required value="{{ $data->id }}" id="hora{{ $data->id }}" />
                                                     <label for="hora{{ $data->id }}">
                                                         {{ $data->hora }} - {{ 'Cantidad '.$data->cantidad }}
                                                     </label>
                                                 </li>                                        
                                             @endforeach
                                         </ul>
-                                    </div>
+                                    </div>                                    
 
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -559,7 +542,7 @@
 
             <div class="fixed-action-btn hide alinear" id="btn-agregar">
                 <button type="submit" class="btn-floating btn-large red">
-                    <i class="material-icons">add</i>
+                    <i class="material-icons">save</i>
                 </button>
             </div>
             
