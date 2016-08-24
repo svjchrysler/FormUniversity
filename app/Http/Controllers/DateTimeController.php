@@ -28,7 +28,7 @@ class DateTimeController extends Controller
 			$data = DB::table('date_times')
 						->join('details', 'date_times.id', '=', 'details.date_time_id')
 						->join('groups', 'details.group_id', '=', 'groups.id')
-						->select('fecha', 'hora')
+						->select('fecha', 'hora', 'dia')
 						->get();
 
 			$person = Group::Find($id);
