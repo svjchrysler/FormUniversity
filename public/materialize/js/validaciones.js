@@ -33,7 +33,7 @@ $(document).ready(function() {
 			console.log(this.files[0].size)
 		else {
 			$('#file1').val("");
-			alert("Subir imagenes menores a 1MB")
+			alert("Subir imagenes menores a 1.5MB")
 		}
 	})
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
 			console.log(this.files[0].size)
 		else {
 			$('#file2').val("");
-			alert("Subir imagenes menores a 1MB")
+			alert("Subir imagenes menores a 1.5MB")
 		}
 	})
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
 			console.log(this.files[0].size)
 		else {
 			$('#file3').val("");
-			alert("Subir imagenes menores a 1MB")
+			alert("Subir imagenes menores a 1.5MB")
 		}
 	})
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
 			console.log(this.files[0].size)
 		else {
 			$('#file4').val("");
-			alert("Subir imagenes menores a 1MB")
+			alert("Subir imagenes menores a 1.5MB")
 		}
 	})
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
 			console.log(this.files[0].size)
 		else {
 			$('#file5').val("");
-			alert("Subir imagenes menores a 1MB")
+			alert("Subir imagenes menores a 1.5MB")
 		}
 	})
 
@@ -78,7 +78,7 @@ $(document).ready(function() {
 			console.log(this.files[0].size)
 		else {
 			$('#file6').val("");
-			alert("Subir imagenes menores a 1MB")
+			alert("Subir imagenes menores a 1.5MB")
 		}
 	})
 
