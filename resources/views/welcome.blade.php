@@ -34,7 +34,7 @@
             </div>
             <div class="col s12 m12 center-align">
                 <div class="card-panel hoverable center-align">
-                    Subir imagenes menores o iguales a 1.5MB. Si consta con una imagen mayor a 1MB link de pagina para comprimir imagen  
+                    Subir imagenes menores o iguales a 1.5MB. Si consta con una imagen mayor a 1.5MB link de pagina para comprimir imagen  
                     <a href="https://compressor.io/" target="_blank">Compresor de Imagenes</a>
                 </div>
             </div>
