@@ -28,7 +28,8 @@ class DateTimeController extends Controller
 			$data = DB::table('date_times')
 						->join('details', 'date_times.id', '=', 'details.date_time_id')
 						->join('groups', 'details.group_id', '=', 'groups.id')
-						->select('fecha', 'hora', 'dia')
+						->where('groups.id', '=', $id)
+						->select('details.id', 'date_times.fecha', 'date_times.hora', 'date_times.dia')
 						->get();
 
 			$person = Group::Find($id);
@@ -38,7 +39,7 @@ class DateTimeController extends Controller
 		    $pdf->loadHTML($view);
 		    $pdf->setPaper('A4', 'landscape');
 
-	       	return $pdf->download('horario');
+	       	return $pdf->download('horario.pdf');
 	}
 
 	public function store(Request $request) {
