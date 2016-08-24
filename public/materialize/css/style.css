@@ -85,3 +85,8 @@
 .altura-col {
 	height: 20em;
 }
+
+.background-enviado {
+	background: url('../img/gracias.jpg') no-repeat !important;
+	background-size: cover !important;
+}
