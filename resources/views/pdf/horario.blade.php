@@ -120,7 +120,7 @@
           @foreach($data as $horario)
             <tr align="center">
               <td class="text-capitalize">{{ $horario->fecha }}</td>
-              <td class="text-capitalize">{{ $horario->hora }} </td>
+              <td>{{ $horario->hora }} </td>
             </tr>
           @endforeach
         </tbody>
