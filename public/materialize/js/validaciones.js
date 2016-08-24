@@ -27,6 +27,73 @@ $(document).ready(function() {
 	$('#next-date').click(function() {
 		$('.carousel').carousel('next');
 	})
+
+	$('#fileimg1').change(function() {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var src = e.target.result;			
+				$('#file1').val(src)				
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
+
+	$('#fileimg2').change(function() {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var src = e.target.result;			
+				$('#file2').val(src)				
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
+
+	$('#fileimg3').change(function() {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var src = e.target.result;			
+				$('#file3').val(src)				
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
+
+	$('#fileimg4').change(function() {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var src = e.target.result;			
+				$('#file4').val(src)				
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
+
+	$('#fileimg5').change(function() {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var src = e.target.result;			
+				$('#file5').val(src)				
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
+
+	$('#fileimg6').change(function() {
+		if (this.files && this.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var src = e.target.result;			
+				$('#file6').val(src)				
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	})
+
 })
 
 

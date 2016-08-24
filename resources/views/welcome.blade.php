@@ -47,7 +47,7 @@
                 
     <!-- Formulario UPSA -->
     
-        {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form', 'files' => 'true']) !!}
+        {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form']) !!}
 
             <div class="container hide altura" id="content-1">
                 <div class="row">
@@ -55,7 +55,8 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file1">
+                                <input type="file" id="fileimg1" name="fileimg1">
+                                <input type="hidden" id="file1" name="file1">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameRepresentante" class="validate">
@@ -74,7 +75,8 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file2">
+                                <input type="file" id="fileimg2" name="fileimg2">
+                                <input type="hidden" id="file2" name="file2">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameOne" class="validate">
@@ -93,7 +95,8 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file3">
+                                <input type="file" id="fileimg3" name="fileimg3">
+                                <input type="hidden" id="file3" name="file3">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameTwo" class="validate">
@@ -112,7 +115,8 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file4">
+                                <input type="file" id="fileimg4" name="fileimg4">
+                                <input type="hidden" id="file4" name="file4">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameThree" class="validate">
@@ -131,7 +135,8 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file5">
+                                <input type="file" id="fileimg5" name="fileimg5">
+                                <input type="hidden" id="file5" name="file5">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFour" class="validate">
@@ -150,7 +155,8 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file6">
+                                <input type="file" id="fileimg6" name="fileimg6">
+                                <input type="hidden" id="file6" name="file6">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFive" class="validate">

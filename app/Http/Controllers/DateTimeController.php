@@ -35,12 +35,12 @@ class DateTimeController extends Controller
 		    $pdf->loadHTML($view);
 		    $pdf->setPaper('A4', 'landscape');
 
-	       	return $pdf->stream('horario');
+	       	return $pdf->download('horario');
 	}
 
 	public function store(Request $request) {
 		$group = $this->guardarUpsa($request);
-		return view('enviado');
+		return view('enviado')->with('id', $group->id);
 	}
 
 	public function enviarCorreo($id) {
