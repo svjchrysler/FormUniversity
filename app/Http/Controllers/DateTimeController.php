@@ -18,6 +18,8 @@ use App\Detail;
 
 use DB;
 
+use Cloudder;
+
 
 class DateTimeController extends Controller
 {
@@ -126,31 +128,37 @@ class DateTimeController extends Controller
 		$group->representante = $request->nameRepresentante;
 		$group->rtelefono = $request->phoneRepresentante;
 		$group->remail = $request->emailRepresentante;
+		Cloudder::upload($request->file1);
 		$group->file1 = $request->file1;
 
 		$group->nombreone = $request->nameOne;
 		$group->telefonoone = $request->phoneOne;
 		$group->emailone = $request->emailOne;
+		Cloudder::upload($request->file2);
 		$group->file2 = $request->file2;
-
+		
 		$group->nombretwo = $request->nameTwo;
 		$group->telefonotwo = $request->phoneTwo;
 		$group->emailtwo = $request->emailTwo;
+		Cloudder::upload($request->file3);
 		$group->file3 = $request->file3;
 
 		$group->nombrethree = $request->nameThree;
 		$group->telefonothree = $request->phoneThree;
 		$group->emailthree = $request->emailThree;
+		Cloudder::upload($request->file4);
 		$group->file4 = $request->file4;
 
 		$group->nombrefour = $request->nameFour;
 		$group->telefonofour = $request->phoneFour;
 		$group->emailfour = $request->emailFour;
+		Cloudder::upload($request->file5);
 		$group->file5 = $request->file5;
 
 		$group->nombrefive = $request->nameFive;
 		$group->telefonofive = $request->phoneFive;
 		$group->emailfive = $request->emailFive;
+		Cloudder::upload($request->file6);
 		$group->file6 = $request->file6;
 
 		$group->save();

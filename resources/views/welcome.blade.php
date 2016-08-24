@@ -48,6 +48,7 @@
     <!-- Formulario UPSA -->
     
         {!! Form::open(['route' => 'form.store', 'method' => 'POST', 'id' => 'form', 'files' => 'true']) !!}
+        {{ csrf_field() }}
 
             <div class="container hide altura" id="content-1">
                 <div class="row">
