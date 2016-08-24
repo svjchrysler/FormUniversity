@@ -15,7 +15,7 @@
 	<div class="container center-align">
 		<div class="row center-align">
 			<div class="col s12 center-align">
-				<a href="url('/pdf/{{ $id }}')" class="btn">Descargar Horarios</a>
+				<a href="{{ url('/pdf/'.$id) }}" class="btn">Descargar Horarios</a>
 			</div>
 		</div>
 	</div>

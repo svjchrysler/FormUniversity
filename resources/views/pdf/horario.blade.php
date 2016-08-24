@@ -83,7 +83,7 @@
 
 	         <tr align="center">
           		<td class="text-capitalize">{{ $person->nombrethree }}</td>
-          		<td class="text-capitalize">{{ $person->emailThree }} </td>
+          		<td class="text-capitalize">{{ $person->emailthree }} </td>
           		<td class="text-capitalize">{{ $person->telefonothree }}</td>
 	        </tr>
 
@@ -95,7 +95,7 @@
 
 	         <tr align="center">
           		<td class="text-capitalize">{{ $person->nombrefive }}</td>
-          		<td class="text-capitalize">{{ $person->emailFive }} </td>
+          		<td class="text-capitalize">{{ $person->emailfive }} </td>
           		<td class="text-capitalize">{{ $person->telefonofive }}</td>
 	        </tr>
           

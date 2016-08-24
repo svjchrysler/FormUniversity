@@ -63,7 +63,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file1" accept="*.jpg,*.png" name="file1">
+                                <input type="file" id="file1" required accept="*.jpg,*.png" name="file1">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameRepresentante" class="validate">
@@ -82,7 +82,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" accept="*.jpg,*.png" id="file2" name="file2">
+                                <input type="file" accept="*.jpg,*.png" required id="file2" name="file2">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameOne" class="validate">
@@ -101,7 +101,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file3" accept="*.jpg,*.png" name="file3">
+                                <input type="file" id="file3" required accept="*.jpg,*.png" name="file3">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameTwo" class="validate">
@@ -120,7 +120,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file4" accept="*.jpg,*.png" name="file4">
+                                <input type="file" id="file4" required accept="*.jpg,*.png" name="file4">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameThree" class="validate">
@@ -139,7 +139,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file5" accept="*.jpg,*.png" name="file5">
+                                <input type="file" id="file5" required accept="*.jpg,*.png" name="file5">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFour" class="validate">
@@ -158,7 +158,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file6" accept="*.jpg,*.png" name="file6">
+                                <input type="file" id="file6" required accept="*.jpg,*.png" name="file6">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFive" class="validate">
