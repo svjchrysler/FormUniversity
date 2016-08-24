@@ -28,11 +28,12 @@ class DateTimeController extends Controller
 			$data = DB::table('date_times')
 						->join('details', 'date_times.id', '=', 'details.date_time_id')
 						->join('groups', 'details.group_id', '=', 'groups.id')
+						->select('fecha', 'hora')
 						->get();
 
-			$group = Group::Find($id);
+			$person = Group::Find($id);
 
-	    	$view =  \View::make('pdf.horario', compact('data', 'group'))->render();
+	    	$view =  \View::make('pdf.horario', compact('data', 'person'))->render();
 		    $pdf = \App::make('dompdf.wrapper');
 		    $pdf->loadHTML($view);
 		    $pdf->setPaper('A4', 'landscape');
@@ -43,6 +44,10 @@ class DateTimeController extends Controller
 	public function store(Request $request) {
 		$group = $this->guardarUpsa($request);
 		return view('enviado')->with('id', $group->id);
+	}
+
+	public function enviado() {
+		return view('enviado');	
 	}
 
 	public function enviarCorreo($id) {
@@ -136,7 +141,7 @@ class DateTimeController extends Controller
 		$group->emailone = $request->emailOne;
 		Cloudder::upload($request->file2);
 		$group->file2 = $request->file2;
-		
+
 		$group->nombretwo = $request->nameTwo;
 		$group->telefonotwo = $request->phoneTwo;
 		$group->emailtwo = $request->emailTwo;

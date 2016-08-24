@@ -28,6 +28,60 @@ $(document).ready(function() {
 		$('.carousel').carousel('next');
 	})
 
+	$('#file1').bind('change', function() {
+		if (this.files[0].size <= 1500000) 
+			console.log(this.files[0].size)
+		else {
+			$('#file1').val("");
+			alert("Subir imagenes menores a 1MB")
+		}
+	})
+
+	$('#file2').bind('change', function() {
+		if (this.files[0].size <= 1500000) 
+			console.log(this.files[0].size)
+		else {
+			$('#file2').val("");
+			alert("Subir imagenes menores a 1MB")
+		}
+	})
+
+	$('#file3').bind('change', function() {
+		if (this.files[0].size <= 1500000) 
+			console.log(this.files[0].size)
+		else {
+			$('#file3').val("");
+			alert("Subir imagenes menores a 1MB")
+		}
+	})
+
+	$('#file4').bind('change', function() {
+		if (this.files[0].size <= 1500000) 
+			console.log(this.files[0].size)
+		else {
+			$('#file4').val("");
+			alert("Subir imagenes menores a 1MB")
+		}
+	})
+
+	$('#file5').bind('change', function() {
+		if (this.files[0].size <= 1500000) 
+			console.log(this.files[0].size)
+		else {
+			$('#file5').val("");
+			alert("Subir imagenes menores a 1MB")
+		}
+	})
+
+	$('#file6').bind('change', function() {
+		if (this.files[0].size <= 1500000) 
+			console.log(this.files[0].size)
+		else {
+			$('#file6').val("");
+			alert("Subir imagenes menores a 1MB")
+		}
+	})
+
 })
 
 

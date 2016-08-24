@@ -9,9 +9,15 @@
 </head>
 <body>
 	<div class="container-fluid email">
-		<h1 class="h1">Gracias por Registrarte</h1>
-		<h4 class="h4">Te enviamos un correo con los horarios registrados</h4>
-		<br>
+		<h1 class="h1">Gracias por Registrar tu equipo</h1>
+	</div>
+
+	<div class="container center-align">
+		<div class="row center-align">
+			<div class="col s12 center-align">
+				<a href="url('/pdf/{{ $id }}')"></a>
+			</div>
+		</div>
 	</div>
 	
 

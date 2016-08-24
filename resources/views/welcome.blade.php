@@ -21,6 +21,7 @@
                     </div>
                 </div>
             </div>    
+
         </div>
 
     <!-- End Inicio -->
@@ -29,6 +30,12 @@
             <div class="col s12 m12">
                 <div class="card-panel teal center-align">
                     <h4 class="white-text">Formulario de Registro</h4>
+                </div>
+            </div>
+            <div class="col s12 m12 center-align">
+                <div class="card-panel hoverable center-align">
+                    Subir imagenes menores o iguales a 1MB. Si consta con una imagen mayor a 1MB link de pagina para comprimir imagen  
+                    <a href="https://compressor.io/" target="_blank">Compresor de Imagenes</a>
                 </div>
             </div>
         </div>
@@ -56,7 +63,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" name="file1">
+                                <input type="file" id="file1" accept="*.jpg,*.png" name="file1">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameRepresentante" class="validate">
@@ -75,7 +82,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file2" name="file2">
+                                <input type="file" accept="image/jpg,image/png" id="file2" name="file2">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameOne" class="validate">
@@ -94,7 +101,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file3" name="file3">
+                                <input type="file" id="file3" accept="image/jpg,image/png" name="file3">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameTwo" class="validate">
@@ -113,7 +120,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file4" name="file4">
+                                <input type="file" id="file4" accept="image/jpg,image/png" name="file4">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameThree" class="validate">
@@ -132,7 +139,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file5" name="file5">
+                                <input type="file" id="file5" accept="image/jpg,image/png" name="file5">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFour" class="validate">
@@ -151,7 +158,7 @@
                         <div class="row">
                             <div class="col s3 center-align">
                                 <br>
-                                <input type="file" id="file6" name="file6">
+                                <input type="file" id="file6" accept="image/jpg,image/png" name="file6">
                             </div>
                             <div class="input-field col s3">
                                 <input id="nombre" type="text" required name="nameFive" class="validate">

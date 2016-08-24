@@ -53,22 +53,52 @@
 	
   	<br>
 	
-	<table class="striped">
+	<table class="striped" align="center">
         <thead>
-          <tr>
-            <th data-field="nombre">Nombre Representante</th>
-            <th data-field="email">Email</th>
-            <th data-field="telefono">Telefono</th>
-          </tr>
+		    <tr align="center">
+		        <th data-field="nombre">Integrantes</th>
+		        <th data-field="email">Email</th>
+		        <th data-field="telefono">Telefono</th>
+	        </tr>
         </thead>
         <tbody>
-          @foreach($group as $person)
-            <tr>
-              <td class="text-capitalize">{{ $person->representante }}</td>
-              <td class="text-capitalize">{{ $person->remail }} </td>
-              <td class="text-capitalize">{{ $person->rtelefono }}</td>
-            </tr>
-          @endforeach
+          
+	        <tr align="center">
+          		<td class="text-capitalize">{{ $person->representante }}</td>
+          		<td class="text-capitalize">{{ $person->remail }} </td>
+          		<td class="text-capitalize">{{ $person->rtelefono }}</td>
+	        </tr>
+
+	         <tr align="center">
+          		<td class="text-capitalize">{{ $person->nombreone }}</td>
+          		<td class="text-capitalize">{{ $person->emailone }} </td>
+          		<td class="text-capitalize">{{ $person->telefonoone }}</td>
+	        </tr>
+
+	         <tr align="center">
+          		<td class="text-capitalize">{{ $person->nombretwo }}</td>
+          		<td class="text-capitalize">{{ $person->emailtwo }} </td>
+          		<td class="text-capitalize">{{ $person->telefonotwo }}</td>
+	        </tr>
+
+	         <tr align="center">
+          		<td class="text-capitalize">{{ $person->nombrethree }}</td>
+          		<td class="text-capitalize">{{ $person->emailThree }} </td>
+          		<td class="text-capitalize">{{ $person->telefonothree }}</td>
+	        </tr>
+
+	         <tr align="center">
+          		<td class="text-capitalize">{{ $person->nombrefour }}</td>
+          		<td class="text-capitalize">{{ $person->emailfour }} </td>
+          		<td class="text-capitalize">{{ $person->telefonofour }}</td>
+	        </tr>
+
+	         <tr align="center">
+          		<td class="text-capitalize">{{ $person->nombrefive }}</td>
+          		<td class="text-capitalize">{{ $person->emailFive }} </td>
+          		<td class="text-capitalize">{{ $person->telefonofive }}</td>
+	        </tr>
+          
         </tbody>
   	</table>
 
@@ -79,16 +109,16 @@
         </div>
   	</div>
     <br>
-  	<table class="striped">
+  	<table class="striped" align="center">
         <thead>
-          <tr>
+          <tr align="center">
             <th data-field="fecha">Fecha</th>
             <th data-field="horario">Horario</th>
           </tr>
         </thead>
         <tbody>
           @foreach($data as $horario)
-            <tr>
+            <tr align="center">
               <td class="text-capitalize">{{ $horario->fecha }}</td>
               <td class="text-capitalize">{{ $horario->hora }} </td>
             </tr>

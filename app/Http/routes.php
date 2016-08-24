@@ -10,6 +10,4 @@ Route::resource('form', 'DateTimeController');
 
 Route::get('/pdf/{id}', 'DateTimeController@pdf');
 
-Route::get('/enviado', function() {
-	return view('enviado');
-});
+Route::get('/enviado', 'DateTimeController@enviado');
